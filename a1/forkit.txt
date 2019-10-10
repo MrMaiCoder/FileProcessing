@@ -1,0 +1,16 @@
+git clone https://github.com/PhairatLin/iccs207test.git
+git checkout -b foobar
+cd week3
+echo "Phairat Lin" >> yadayada.txt
+git add .
+git commit -m "Added my name"
+
+git checkout master
+echo "Name added" >> yadayada.txt
+
+git merge master foobar 
+vim yadayada.txt #Resolve the conflict
+git merge master foobar
+git add .
+git commit -m "Conflict resolved"
+git push
